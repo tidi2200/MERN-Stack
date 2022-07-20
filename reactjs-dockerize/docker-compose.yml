@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+    environment:
+       WATCHPACK_POLLING: "true"
+    image: reactjs-dockerize
+    ports:
+      - "2200:3000"
+    volumes:
+      - ./src:/app/src
